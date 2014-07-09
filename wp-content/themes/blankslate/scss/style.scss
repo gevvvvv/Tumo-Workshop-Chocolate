@@ -9,15 +9,24 @@ body, #wrapper {
 	margin: 0;
 	padding: 0;
 }
-header {
+header{
 	padding: 20px 0;
 	height: 100px;
 	background-color: #dd6781;
+}
+#footer{
+	background-color: #dd6781;
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	bottom: 0;
+	padding-top: 1.5%;
 }
 .container {
 	width: 70%;
 	margin: 0 auto;
 }
+
 .fl {
 	float: left;
 }
@@ -29,4 +38,79 @@ header {
 }
 ul {
 	list-style: none;
+}
+#copyright{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-style: italic;
+	font-size: 12px;
+	float: left;
+}
+#footerlogo {
+	width: 50px;
+	float: left;
+	margin-top: 8px;
+	margin-right: 1%;
+	margin-left: 10%;
+}
+
+#icons{
+	margin-left: 80%;
+} 
+
+#facebook {
+   background-image: url('images/Facebook.png');
+   height: 32px;
+   width: 32px;
+   float: left;
+}
+
+#facebook:hover {
+   background-image: url('images/Facebook_hover1.png');
+}
+
+#twitter {
+   background-image: url('images/Twitter.png');
+   height: 32px;
+   width: 32px;
+   float: left;
+}
+
+#twitter:hover {
+   background-image: url('images/Twitter_hover1.png');
+}
+
+#flickr {
+   background-image: url('images/Flickr.png');
+   height: 32px;
+   width: 32px;
+   float: left;
+}
+
+#flickr:hover {
+   background-image: url('images/Flickr_hover.png');
+}
+
+#youtube {
+   background-image: url('images/Youtube.png');
+   height: 32px;
+   width: 32px;
+   float: left;
+}
+
+#youtube:hover {
+   background-image: url('images/Youtube_hover1.png');
+}
+
+a.icon {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+.icons div{
+	background-position: 0;
+}
+
+.icons div:hover{
+	background-position: 0;
 }
