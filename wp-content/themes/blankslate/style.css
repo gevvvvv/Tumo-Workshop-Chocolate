@@ -21,7 +21,109 @@ header {
 }
 
 /* line 17, scss/style.scss */
+#footer {
+  background-color: #dd6781;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  padding-top: 1.5%;
+}
+
+/* line 25, scss/style.scss */
 .container {
   width: 70%;
   margin: 0 auto;
+}
+
+/* line 29, scss/style.scss */
+#copyright {
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  float: left;
+}
+
+/* line 35, scss/style.scss */
+#footerlogo {
+  width: 50px;
+  float: left;
+  margin-top: 8px;
+  margin-right: 1%;
+  margin-left: 10%;
+}
+
+/* line 43, scss/style.scss */
+#icons {
+  margin-left: 80%;
+}
+
+/* line 47, scss/style.scss */
+#facebook {
+  background-image: url("images/Facebook.png");
+  height: 32px;
+  width: 32px;
+  float: left;
+}
+
+/* line 54, scss/style.scss */
+#facebook:hover {
+  background-image: url("images/Facebook_hover1.png");
+}
+
+/* line 58, scss/style.scss */
+#twitter {
+  background-image: url("images/Twitter.png");
+  height: 32px;
+  width: 32px;
+  float: left;
+}
+
+/* line 65, scss/style.scss */
+#twitter:hover {
+  background-image: url("images/Twitter_hover1.png");
+}
+
+/* line 69, scss/style.scss */
+#flickr {
+  background-image: url("images/Flickr.png");
+  height: 32px;
+  width: 32px;
+  float: left;
+}
+
+/* line 76, scss/style.scss */
+#flickr:hover {
+  background-image: url("images/Flickr_hover.png");
+}
+
+/* line 80, scss/style.scss */
+#youtube {
+  background-image: url("images/Youtube.png");
+  height: 32px;
+  width: 32px;
+  float: left;
+}
+
+/* line 87, scss/style.scss */
+#youtube:hover {
+  background-image: url("images/Youtube_hover1.png");
+}
+
+/* line 91, scss/style.scss */
+a.icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+/* line 97, scss/style.scss */
+.icons div {
+  background-position: 0;
+}
+
+/* line 101, scss/style.scss */
+.icons div:hover {
+  background-position: 0;
 }
