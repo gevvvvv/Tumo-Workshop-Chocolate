@@ -11,11 +11,10 @@
 <div id="wrapper" class="hfeed">
 	<header id="header" role="banner">
 		<div class="container">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'blankslate' ); ?>" rel="home">
-						<!--<?php echo esc_html( get_bloginfo( 'name' ) ); ?>-->
-						<img src="<?php bloginfo( 'template_url' ); ?>/images/logo.png">
+			<a class="img fl" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'blankslate' ); ?>" rel="home">
+				<img src="<?php bloginfo( 'template_url' ); ?>/images/logo.png">
 			</a>
-			<nav id="menu" role="navigation">
+			<nav class="fr db" id="menu" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 			</nav>
 		</div>

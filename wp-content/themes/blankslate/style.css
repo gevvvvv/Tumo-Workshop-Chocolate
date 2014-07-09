@@ -1,27 +1,52 @@
-/* line 1, scss/style.scss */
+@font-face {
+  font-family: 'Gessele Regular';
+  src: url('http://www.fontsaddict.com/fontface/gessele-regular.TTF');
+}
 body {
-  background-image: url("images/bg.png");
   margin: 0;
   padding: 0;
-  font-family: 'gesseleregular';
+  font-family: 'Gessele Regular';
   font-weight: bold;
 }
-
-/* line 8, scss/style.scss */
 body, #wrapper {
   margin: 0;
   padding: 0;
 }
-
-/* line 12, scss/style.scss */
-header {
+#header {
   padding: 20px 0;
-  height: 100px;
+  height: 128px;
   background-color: #dd6781;
 }
-
-/* line 17, scss/style.scss */
+#header .img {
+  margin: 0 20px;
+}
 .container {
   width: 70%;
   margin: 0 auto;
+  min-width: 810px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.db {
+  display: inline-block;
+}
+.menu {
+  list-style: none;
+  margin-top: 80px;
+}
+.menu li {
+  float: left;
+  padding: 20px 15px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #47150b;
+  font-size: 40px;
+}
+.menu li a:hover {
+  color: #842311;
 }
