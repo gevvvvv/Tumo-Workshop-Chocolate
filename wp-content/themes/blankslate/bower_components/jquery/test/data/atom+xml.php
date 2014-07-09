@@ -1,4 +1,4 @@
 <?php header("Content-type: atom+xml") ?>
 <root>
-	<element />
+    <element/>
 </root>

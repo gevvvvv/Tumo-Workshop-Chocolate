@@ -2,7 +2,6 @@
 // Forms
 // --------------------------------------------------
 
-
 // Normalize non-controls
 //
 // Restyle and baseline non-control form elements.
@@ -36,7 +35,6 @@ label {
   font-weight: bold;
 }
 
-
 // Normalize form controls
 //
 // While most of our form styles require extra classes, some basic normalization
@@ -52,7 +50,7 @@ input[type="search"] {
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
-  margin-top: 1px \9; // IE8-9
+  margin-top: 1px  \9; // IE8-9
   line-height: normal;
 }
 
@@ -88,7 +86,6 @@ output {
   line-height: @line-height-base;
   color: @input-color;
 }
-
 
 // Common form controls
 //
@@ -152,7 +149,6 @@ output {
   }
 }
 
-
 // Search inputs in iOS
 //
 // This overrides the extra rounded corners on search inputs in iOS so that our
@@ -163,7 +159,6 @@ output {
 input[type="search"] {
   -webkit-appearance: none;
 }
-
 
 // Special styles for iOS temporal inputs
 //
@@ -189,7 +184,6 @@ input[type="month"] {
   }
 }
 
-
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
@@ -198,7 +192,6 @@ input[type="month"] {
 .form-group {
   margin-bottom: 15px;
 }
-
 
 // Checkboxes and radios
 //
@@ -219,13 +212,14 @@ input[type="month"] {
     cursor: pointer;
   }
 }
+
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-left: -20px;
-  margin-top: 4px \9;
+  margin-top: 4px  \9;
 }
 
 .radio + .radio,
@@ -243,6 +237,7 @@ input[type="month"] {
   font-weight: normal;
   cursor: pointer;
 }
+
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
@@ -261,6 +256,7 @@ input[type="checkbox"] {
     cursor: not-allowed;
   }
 }
+
 // These classes are used directly on <label>s
 .radio-inline,
 .checkbox-inline {
@@ -269,6 +265,7 @@ input[type="checkbox"] {
     cursor: not-allowed;
   }
 }
+
 // These classes are used on elements with <label> descendants
 .radio,
 .checkbox {
@@ -279,7 +276,6 @@ input[type="checkbox"] {
     }
   }
 }
-
 
 // Static form control text
 //
@@ -300,20 +296,28 @@ input[type="checkbox"] {
   }
 }
 
-
 // Form control sizing
 //
 // Build on `.form-control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
 
 .input-sm {
-  .input-size(@input-height-small; @padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+  .input-size(@input-height-small;
+@padding-small-vertical;
+@padding-small-horizontal;
+@font-size-small;
+@line-height-small;
+@border-radius-small);
 }
 
 .input-lg {
-  .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+  .input-size(@input-height-large;
+@padding-large-vertical;
+@padding-large-horizontal;
+@font-size-large;
+@line-height-large;
+@border-radius-large);
 }
-
 
 // Form control feedback states
 //
@@ -328,6 +332,7 @@ input[type="checkbox"] {
     padding-right: (@input-height-base * 1.25);
   }
 }
+
 // Feedback icon (requires .glyphicon classes)
 .form-control-feedback {
   position: absolute;
@@ -340,11 +345,13 @@ input[type="checkbox"] {
   line-height: @input-height-base;
   text-align: center;
 }
+
 .input-lg + .form-control-feedback {
   width: @input-height-large;
   height: @input-height-large;
   line-height: @input-height-large;
 }
+
 .input-sm + .form-control-feedback {
   width: @input-height-small;
   height: @input-height-small;
@@ -353,21 +360,27 @@ input[type="checkbox"] {
 
 // Feedback states
 .has-success {
-  .form-control-validation(@state-success-text; @state-success-text; @state-success-bg);
-}
-.has-warning {
-  .form-control-validation(@state-warning-text; @state-warning-text; @state-warning-bg);
-}
-.has-error {
-  .form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+  .form-control-validation(@state-success-text;
+@state-success-text;
+@state-success-bg);
 }
 
+.has-warning {
+  .form-control-validation(@state-warning-text;
+@state-warning-text;
+@state-warning-bg);
+}
+
+.has-error {
+  .form-control-validation(@state-danger-text;
+@state-danger-text;
+@state-danger-bg);
+}
 
 // Reposition feedback icon if label is hidden with "screenreader only" state
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
 }
-
 
 // Help text
 //
@@ -380,8 +393,6 @@ input[type="checkbox"] {
   margin-bottom: 10px;
   color: lighten(@text-color, 25%); // lighten the text some for contrast
 }
-
-
 
 // Inline forms
 //
@@ -447,6 +458,7 @@ input[type="checkbox"] {
         padding-left: 0;
       }
     }
+
     .radio input[type="radio"],
     .checkbox input[type="checkbox"] {
       position: relative;
@@ -462,7 +474,6 @@ input[type="checkbox"] {
     }
   }
 }
-
 
 // Horizontal forms
 //
@@ -524,7 +535,8 @@ input[type="checkbox"] {
       }
     }
     .form-control {
-      &:extend(.input-lg);
+      &:extend(.input-lg)
+    ;
     }
   }
   .form-group-sm {
@@ -534,7 +546,8 @@ input[type="checkbox"] {
       }
     }
     .form-control {
-      &:extend(.input-sm);
+      &:extend(.input-sm)
+    ;
     }
   }
 }

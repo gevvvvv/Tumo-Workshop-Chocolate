@@ -7,7 +7,8 @@
 
   * {
     text-shadow: none !important;
-    color: #000 !important; // Black prints faster: h5bp.com/s
+    color: #000 !important;
+    // Black prints faster: h5bp.com/s
     background: transparent !important;
     box-shadow: none !important;
   }
@@ -25,7 +26,7 @@
     content: " (" attr(title) ")";
   }
 
-  // Don't show links for images, or javascript/internal links
+// Don't show links for images, or javascript/internal links
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
@@ -38,7 +39,8 @@
   }
 
   thead {
-    display: table-header-group; // h5bp.com/t
+    display: table-header-group;
+    // h5bp.com/t
   }
 
   tr,
@@ -62,13 +64,13 @@
     page-break-after: avoid;
   }
 
-  // Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
-  // Once fixed, we can just straight up remove this.
+// Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
+// Once fixed, we can just straight up remove this.
   select {
     background: #fff !important;
   }
 
-  // Bootstrap components
+// Bootstrap components
   .navbar {
     display: none;
   }

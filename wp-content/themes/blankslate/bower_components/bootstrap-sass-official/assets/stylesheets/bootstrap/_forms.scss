@@ -2,7 +2,6 @@
 // Forms
 // --------------------------------------------------
 
-
 // Normalize non-controls
 //
 // Restyle and baseline non-control form elements.
@@ -31,11 +30,11 @@ legend {
 
 label {
   display: inline-block;
-  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  max-width: 100%;
+  // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 
 // Normalize form controls
 //
@@ -52,7 +51,8 @@ input[type="search"] {
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
-  margin-top: 1px \9; // IE8-9
+  margin-top: 1px  \9;
+  // IE8-9
   line-height: normal;
 }
 
@@ -89,7 +89,6 @@ output {
   color: $input-color;
 }
 
-
 // Common form controls
 //
 // Shared size and type resets for form controls. Apply `.form-control` to any
@@ -115,16 +114,18 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  height: $input-height-base;
+  // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   padding: $padding-base-vertical $padding-base-horizontal;
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $input-color;
   background-color: $input-bg;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-image: none;
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid $input-border;
   border-radius: $input-border-radius;
-  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
@@ -143,7 +144,8 @@ output {
   fieldset[disabled] & {
     cursor: not-allowed;
     background-color: $input-bg-disabled;
-    opacity: 1; // iOS fix for unreadable disabled content
+    opacity: 1;
+    // iOS fix for unreadable disabled content
   }
 
   // [converter] extracted textarea& to textarea.form-control
@@ -153,7 +155,6 @@ output {
 textarea.form-control {
   height: auto;
 }
-
 
 // Search inputs in iOS
 //
@@ -165,7 +166,6 @@ textarea.form-control {
 input[type="search"] {
   -webkit-appearance: none;
 }
-
 
 // Special styles for iOS temporal inputs
 //
@@ -191,7 +191,6 @@ input[type="month"] {
   }
 }
 
-
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
@@ -201,7 +200,6 @@ input[type="month"] {
   margin-bottom: 15px;
 }
 
-
 // Checkboxes and radios
 //
 // Indent the labels to position radios/checkboxes as hanging controls.
@@ -210,7 +208,8 @@ input[type="month"] {
 .checkbox {
   position: relative;
   display: block;
-  min-height: $line-height-computed; // clear the floating input if there is no label text
+  min-height: $line-height-computed;
+  // clear the floating input if there is no label text
   margin-top: 10px;
   margin-bottom: 10px;
 
@@ -221,18 +220,20 @@ input[type="month"] {
     cursor: pointer;
   }
 }
+
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-left: -20px;
-  margin-top: 4px \9;
+  margin-top: 4px  \9;
 }
 
 .radio + .radio,
 .checkbox + .checkbox {
-  margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+  margin-top: -5px;
+  // Move up sibling radios or checkboxes for tighter spacing
 }
 
 // Radios and checkboxes on same line
@@ -245,10 +246,12 @@ input[type="month"] {
   font-weight: normal;
   cursor: pointer;
 }
+
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
-  margin-left: 10px; // space out consecutive inline controls
+  margin-left: 10px;
+  // space out consecutive inline controls
 }
 
 // Apply same disabled cursor tweak as for inputs
@@ -263,6 +266,7 @@ input[type="checkbox"] {
     cursor: not-allowed;
   }
 }
+
 // These classes are used directly on <label>s
 .radio-inline,
 .checkbox-inline {
@@ -271,6 +275,7 @@ input[type="checkbox"] {
     cursor: not-allowed;
   }
 }
+
 // These classes are used on elements with <label> descendants
 .radio,
 .checkbox {
@@ -281,7 +286,6 @@ input[type="checkbox"] {
     }
   }
 }
-
 
 // Static form control text
 //
@@ -302,7 +306,6 @@ input[type="checkbox"] {
   }
 }
 
-
 // Form control sizing
 //
 // Build on `.form-control` with modifier classes to decrease or increase the
@@ -311,7 +314,6 @@ input[type="checkbox"] {
 @include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
 
 @include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
-
 
 // Form control feedback states
 //
@@ -326,23 +328,28 @@ input[type="checkbox"] {
     padding-right: ($input-height-base * 1.25);
   }
 }
+
 // Feedback icon (requires .glyphicon classes)
 .form-control-feedback {
   position: absolute;
-  top: ($line-height-computed + 5); // Height of the `label` and its margin
+  top: ($line-height-computed + 5);
+  // Height of the `label` and its margin
   right: 0;
-  z-index: 2; // Ensure icon is above input groups
+  z-index: 2;
+  // Ensure icon is above input groups
   display: block;
   width: $input-height-base;
   height: $input-height-base;
   line-height: $input-height-base;
   text-align: center;
 }
+
 .input-lg + .form-control-feedback {
   width: $input-height-large;
   height: $input-height-large;
   line-height: $input-height-large;
 }
+
 .input-sm + .form-control-feedback {
   width: $input-height-small;
   height: $input-height-small;
@@ -353,19 +360,19 @@ input[type="checkbox"] {
 .has-success {
   @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
 }
+
 .has-warning {
   @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
 }
+
 .has-error {
   @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
 }
-
 
 // Reposition feedback icon if label is hidden with "screenreader only" state
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
 }
-
 
 // Help text
 //
@@ -373,13 +380,13 @@ input[type="checkbox"] {
 // below a form control. Use for general help, formatting, or instructional text.
 
 .help-block {
-  display: block; // account for any element using help-block
+  display: block;
+  // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 10px;
-  color: lighten($text-color, 25%); // lighten the text some for contrast
+  color: lighten($text-color, 25%);
+  // lighten the text some for contrast
 }
-
-
 
 // Inline forms
 //
@@ -396,17 +403,18 @@ input[type="checkbox"] {
 
   // Kick in the inline
   @media (min-width: $screen-sm-min) {
-    // Inline-block all the things for "inline"
+  // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
       margin-bottom: 0;
       vertical-align: middle;
     }
 
-    // In navbar-form, allow folks to *not* use `.form-group`
+  // In navbar-form, allow folks to *not* use `.form-group`
     .form-control {
       display: inline-block;
-      width: auto; // Prevent labels from stacking above inputs in `.form-group`
+      width: auto;
+      // Prevent labels from stacking above inputs in `.form-group`
       vertical-align: middle;
     }
 
@@ -421,7 +429,7 @@ input[type="checkbox"] {
       }
     }
 
-    // Input groups need that 100% width though
+  // Input groups need that 100% width though
     .input-group > .form-control {
       width: 100%;
     }
@@ -431,9 +439,9 @@ input[type="checkbox"] {
       vertical-align: middle;
     }
 
-    // Remove default margin on radios/checkboxes that were used for stacking, and
-    // then undo the floating of radios and checkboxes to match (which also avoids
-    // a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
+  // Remove default margin on radios/checkboxes that were used for stacking, and
+  // then undo the floating of radios and checkboxes to match (which also avoids
+  // a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
     .radio,
     .checkbox {
       display: inline-block;
@@ -451,16 +459,15 @@ input[type="checkbox"] {
       margin-left: 0;
     }
 
-    // Validation states
-    //
-    // Reposition the icon because it's now within a grid column and columns have
-    // `position: relative;` on them. Also accounts for the grid gutter padding.
+  // Validation states
+  //
+  // Reposition the icon because it's now within a grid column and columns have
+  // `position: relative;` on them. Also accounts for the grid gutter padding.
     .has-feedback .form-control-feedback {
       top: 0;
     }
   }
 }
-
 
 // Horizontal forms
 //
@@ -478,7 +485,8 @@ input[type="checkbox"] {
   .checkbox-inline {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+    padding-top: ($padding-base-vertical + 1);
+    // Default padding plus a border
   }
   // Account for padding we're adding to ensure the alignment and of help text
   // and other content below items
@@ -498,7 +506,8 @@ input[type="checkbox"] {
     .control-label {
       text-align: right;
       margin-bottom: 0;
-      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+      padding-top: ($padding-base-vertical + 1);
+      // Default padding plus a border
     }
   }
 

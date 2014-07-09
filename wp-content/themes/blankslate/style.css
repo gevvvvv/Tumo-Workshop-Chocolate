@@ -1,4 +1,27 @@
 /* line 1, scss/style.scss */
 body {
-  background: yellow;
+  background-image: url("images/bg.png");
+  margin: 0;
+  padding: 0;
+  font-family: 'gesseleregular';
+  font-weight: bold;
+}
+
+/* line 8, scss/style.scss */
+body, #wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, scss/style.scss */
+header {
+  padding: 20px 0;
+  height: 100px;
+  background-color: #dd6781;
+}
+
+/* line 17, scss/style.scss */
+.container {
+  width: 70%;
+  margin: 0 auto;
 }
