@@ -12,7 +12,7 @@ app = {}, UTIL = {
 }, $(document).ready(UTIL.loadEvents), app.common = {
     init: function() {
         function n() {
-            var n = parseInt($(window).height(), "px"), i = parseInt($("#header").height(), "px") + parseInt($("#header").css("padding-bottom"), "px") + parseInt($("#header").css("padding-top"), "px"), e = parseInt($("#footer").height(), "px") + parseInt($("#footer").css("padding-top"), "px");
+            var n = parseInt($(window).height(), "px"), i = parseInt($("#header").height(), "px") + parseInt($("#header").css("padding-bottom"), "px") + parseInt($("#header").css("padding-top"), "px"), e = parseInt($("#footer").height(), "px") + parseInt($("#footer").css("padding-top"), "px") + 41;
             $("#container").css("min-height", function() {
                 return n - (i + e) + "px";
             });

@@ -3,7 +3,7 @@ app.common = {
 		function footer(){
 			var ww = parseInt($(window).height(), "px");
 			var hw = parseInt($("#header").height(), "px") + parseInt($("#header").css("padding-bottom"), "px") + parseInt($("#header").css("padding-top"), "px");
-			var fw = parseInt($("#footer").height(), "px") + parseInt($("#footer").css("padding-top"), "px");
+			var fw = parseInt($("#footer").height(), "px") + parseInt($("#footer").css("padding-top"), "px") + 41;
 			$("#container").css("min-height", function(){
 				return ww - (hw + fw )+ "px";
 			});
