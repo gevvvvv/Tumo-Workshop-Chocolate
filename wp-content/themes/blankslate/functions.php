@@ -77,3 +77,32 @@ return $count;
 
     return $page;
 } 
+add_action( 'init', 'post_type_slides' );
+
+function post_type_slides() {
+    $labels = array(
+        'name'               => _x( 'slides', 'post type general name' ),
+        'singular_name'      => _x( 'slides', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'slide' ),
+        'add_new_item'       => __( 'Add New slide' ),
+        'edit_item'          => __( 'Edit slide' ),
+        'new_item'           => __( 'New slide' ),
+        'all_items'          => __( 'All slides' ),
+        'view_item'          => __( 'View slide' ),
+        'search_items'       => __( 'Search slides' ),
+        'not_found'          => __( 'No slides found' ),
+        'not_found_in_trash' => __( 'No slides found in the Trash' ),
+        'parent_item_colon'  => '',
+        'menu_name'          => 'slides'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our slides and slide specific data',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', ),
+        'has_archive'   => true,
+        'rewrite'       => array('slug' => 'slides')
+    );
+    register_post_type( 'slide', $args );
+}

@@ -8,54 +8,64 @@ body {
 }
 
 /* line 8, scss/style.scss */
-body, #wrapper {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 12, scss/style.scss */
-header {
+#header {
   padding: 20px 0;
-  height: 100px;
+  height: 130px;
   background-color: #dd6781;
 }
 
-/* line 17, scss/style.scss */
+/* line 13, scss/style.scss */
 #footer {
   background-color: #dd6781;
   width: 100%;
   height: 70px;
   bottom: 0;
   padding-top: 1.5%;
+  padding-bottom: 0px;
 }
 
-/* line 24, scss/style.scss */
+/* line 21, scss/style.scss */
+.menu {
+  list-style: none;
+  float: right;
+  margin-top: 80px;
+  margin-right: 10%;
+}
+
+/* line 27, scss/style.scss */
+.menu li {
+  display: inline-block;
+  font-size: 40px;
+  padding: 5px 30px;
+}
+
+/* line 32, scss/style.scss */
 .container {
   width: 70%;
   margin: 0 auto;
 }
 
-/* line 29, scss/style.scss */
+/* line 37, scss/style.scss */
 .fl {
   float: left;
 }
 
-/* line 32, scss/style.scss */
+/* line 40, scss/style.scss */
 .fr {
   float: right;
 }
 
-/* line 35, scss/style.scss */
+/* line 43, scss/style.scss */
 .db {
   display: inline-block;
 }
 
-/* line 38, scss/style.scss */
+/* line 46, scss/style.scss */
 ul {
   list-style: none;
 }
 
-/* line 41, scss/style.scss */
+/* line 49, scss/style.scss */
 #copyright {
   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
   font-style: italic;
@@ -63,7 +73,7 @@ ul {
   float: left;
 }
 
-/* line 47, scss/style.scss */
+/* line 55, scss/style.scss */
 #footerlogo {
   width: 50px;
   float: left;
@@ -72,12 +82,12 @@ ul {
   margin-left: 10%;
 }
 
-/* line 55, scss/style.scss */
+/* line 63, scss/style.scss */
 #icons {
   margin-left: 80%;
 }
 
-/* line 59, scss/style.scss */
+/* line 67, scss/style.scss */
 #facebook {
   background-image: url("images/Facebook.png");
   height: 32px;
@@ -85,12 +95,12 @@ ul {
   float: left;
 }
 
-/* line 66, scss/style.scss */
+/* line 74, scss/style.scss */
 #facebook:hover {
   background-image: url("images/Facebook_hover1.png");
 }
 
-/* line 70, scss/style.scss */
+/* line 78, scss/style.scss */
 #twitter {
   background-image: url("images/Twitter.png");
   height: 32px;
@@ -98,12 +108,12 @@ ul {
   float: left;
 }
 
-/* line 77, scss/style.scss */
+/* line 85, scss/style.scss */
 #twitter:hover {
   background-image: url("images/Twitter_hover1.png");
 }
 
-/* line 81, scss/style.scss */
+/* line 89, scss/style.scss */
 #flickr {
   background-image: url("images/Flickr.png");
   height: 32px;
@@ -111,12 +121,12 @@ ul {
   float: left;
 }
 
-/* line 88, scss/style.scss */
+/* line 96, scss/style.scss */
 #flickr:hover {
   background-image: url("images/Flickr_hover.png");
 }
 
-/* line 92, scss/style.scss */
+/* line 100, scss/style.scss */
 #youtube {
   background-image: url("images/Youtube.png");
   height: 32px;
@@ -124,12 +134,12 @@ ul {
   float: left;
 }
 
-/* line 99, scss/style.scss */
+/* line 107, scss/style.scss */
 #youtube:hover {
   background-image: url("images/Youtube_hover1.png");
 }
 
-/* line 103, scss/style.scss */
+/* line 111, scss/style.scss */
 a.icon {
   display: block;
   height: 100%;
@@ -137,13 +147,12 @@ a.icon {
   text-decoration: none;
 }
 
-/* line 109, scss/style.scss */
+/* line 117, scss/style.scss */
 .icons div {
   background-position: 0;
 }
 
-/* line 113, scss/style.scss */
+/* line 121, scss/style.scss */
 .icons div:hover {
   background-position: 0;
 }
-

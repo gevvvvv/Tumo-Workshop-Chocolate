@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                     'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/bootstrap.js'
 
                 ],
-                dest: 'vendor.js'
+                dest: 'js/vendor.js'
             }
         },
 
