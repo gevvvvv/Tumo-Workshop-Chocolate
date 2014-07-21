@@ -1,18 +1,33 @@
+<?php
+$items = new WP_Query(
+    array(
+        'post_type' => 'brand',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'caller_get_posts'=> 1
+    )
+);
+
+wp_reset_query();
+
+$items = $items->posts;
+
+?>
+
 <?php get_header(); ?>
-<section id="content" role="main">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<header class="header">
-<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
-</header>
-<section class="entry-content">
-<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-<?php the_content(); ?>
-<div class="entry-links"><?php wp_link_pages(); ?></div>
-</section>
-</article>
-<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-<?php endwhile; endif; ?>
-</section>
+<?php foreach($items as $item):
+    $item->meta = get_fields($item->ID);
+?>
+	<div class="galonelvel with_href folio_box col_s prettyPhoto hs_done masonry-brick" title="Lorem ipsum photo caption" rel="gal\[b\]" style="position: absolute;">
+		<a style="display: none;" href="" title="">
+			<img src="<?=$item->meta["image"]["url"];?>" width="220" height="220">
+		</a>
+		<div class="folio" style="background: url(<?=$item->meta["image"]["url"];?>) 0 0; height: 220px; width: 220px;">  
+			<i style="height: 220px; width: 220px; display: block; opacity: 0;"></i>
+		</div>
+	</div>
+<?php endforeach; ?>
+
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

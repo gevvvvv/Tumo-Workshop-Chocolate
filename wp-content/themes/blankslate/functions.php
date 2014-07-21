@@ -77,6 +77,10 @@ return $count;
 
     return $page;
 } 
+
+
+
+
 add_action( 'init', 'post_type_slides' );
 
 function post_type_slides() {
@@ -105,4 +109,37 @@ function post_type_slides() {
         'rewrite'       => array('slug' => 'slides')
     );
     register_post_type( 'slide', $args );
+}
+
+
+
+
+add_action( 'init', 'post_type_brands' );
+
+function post_type_brands() {
+    $labels = array(
+        'name'               => _x( 'brands', 'post type general name' ),
+        'singular_name'      => _x( 'brandsbrand', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'brand' ),
+        'add_new_item'       => __( 'Add New brand' ),
+        'edit_item'          => __( 'Edit brand' ),
+        'new_item'           => __( 'New brand' ),
+        'all_items'          => __( 'All brands' ),
+        'view_item'          => __( 'View brand' ),
+        'search_items'       => __( 'Search brands' ),
+        'not_found'          => __( 'No brands found' ),
+        'not_found_in_trash' => __( 'No brands found in the Trash' ),
+        'parent_item_colon'  => '',
+        'menu_name'          => 'brands'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our brands and brand specific data',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', ),
+        'has_archive'   => true,
+        'rewrite'       => array('slug' => 'brands-list')
+    );
+    register_post_type( 'brand', $args );
 }
