@@ -21,6 +21,7 @@ body {
   padding: 15px 0;
   height: 130px;
   background-color: #dd6781;
+  min-width: 1030px;
 }
 
 /* line 24, scss/style.scss */
@@ -38,8 +39,8 @@ body {
   list-style: none;
   float: right;
   margin-top: 95px;
-  padding-right: 27%;
-  width: 500px;
+  margin-right: 27%;
+  width: 430px;
 }
 
 /* line 38, scss/style.scss */
@@ -521,12 +522,7 @@ figure {
   margin-left: 12%;
 }
 
-
-
-
-
 /*=======================CONTACT=============================*/
-
 
 .contactContent h1 {
     font-family:'Questrial', Verdana, sans-serif;
@@ -572,8 +568,8 @@ figure {
 .contactContent {
 	position:relative;
     margin:50px auto;
-    width:50%;
-    min-height:200px;
+    width:950px;
+    min-height:650px;
     z-index:100;
     padding:30px;
     border:1px solid #383838;
@@ -666,12 +662,13 @@ figure {
 	display: inline-block;
 }
 .contactContent .entry-content {
-	width: 50%;
+	width: 475px;
 	border-right-width: 2px;
 	border-left: 0;
     border-right-style: solid;
     -webkit-border-image: 
     -webkit-gradient(linear, 0 0, 0 100%, from(#ccc), to(rgba(0, 0, 0, 0))) 1 100%;
+    float: left;
 }
 .contactContent input[type=submit] {
     margin-left:300px;
@@ -762,4 +759,112 @@ figure {
     -webkit-transition: color 1s ease;
     -moz-transition: color 1s ease;
     transition: color 1s ease;
+}
+.contactImages {
+	float: left;
+	width: 410px;
+	padding-left: 30px;
+	font-family:'Droid Sans', Tahoma, Arial, Verdana sans-serif;
+}
+.contactImages a {
+	text-decoration: none;
+}
+.contactImages *{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.contactImages img{
+    border: 1px solid #d2d2d2;
+    padding: 3px;
+    box-shadow: 0 0 5px #333;
+   
+}
+
+.contactImages .pic-container{
+    max-width: 120px;
+    max-height: 120px;
+    height: 100px;
+    margin: 15px;
+    display: inline-block;
+}
+.contactImages .pic{
+    background: #fff;
+    position: absolute;
+    
+    -webkit-transition: all 0.2s ease;
+     transition: all 0.2s ease;
+    
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    width: 135px;
+    height: 135px;
+}
+.contactImages .pix:nth:child(1){
+    z-index: 3;
+}
+.contactImages .pic:nth-child(2){
+    z-index: 1;
+}
+.contactImages .pic:nth-child(3){
+    z-index: 2;
+}
+.contactImages .pic-container:hover .pic:nth-child(1)
+{
+    -webkit-transform: rotate(15deg);
+     transform: rotate(15deg);
+    
+    -webkit-transition: all 0.5s ease;
+     transition: all 0.5s ease;
+}
+
+.contactImages .pic-container:hover .pic:nth-child(2){
+    -webkit-transform: rotate(7deg);
+     transform: rotate(7deg);
+     
+    -webkit-transition: all 0.10s ease;
+     transition: all 0.10s ease;
+}
+
+.contactImages .pic-container:hover .pic:nth-child(3){
+    -webkit-transform: rotate(-5deg);
+     transform: rotate(-5deg);
+}
+.contactImages .pic-caption{
+    background: #dd6781;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    z-index: 10;
+    top:50px;
+    left: 200px;
+    
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    
+    -webkit-opacity: 0;
+    opacity: 0;
+    
+}
+.contactImages .pic-caption:hover{
+    background: #dd6781;
+}
+.contactImages .pic-container:hover .pic-caption{
+    left:175px;
+  
+    -webkit-opacity: 1;
+    opacity: 1;
+}
+.pic-container2 {
+	float: right;
+}
+.contactImages .pic-caption2 {
+  left: -200px;
+}
+.contactImages .pic-container:hover .pic-caption2 {
+  left: -150px;
 }
